@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>客户端连接</title>
+	<style type="text/css">
+		body{
+			background-color: #3D6DF2;
+			margin-top:15px;
+			font-family: sans-serif;
+			color: white;
+		}
+
+		video{
+			background: black;
+			border: 1px solid gray;
+		}
+
+		.page{
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 500px;
+			height: 500px;
+		}
+
+		#yours{
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+
+		#theirs{
+			width: 500px;
+			height: 500px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="login-page" class="page">
+		<h2>login as</h2>
+		<input type="text" id="username">
+		<button id="login">login</button>
+	</div>
+
+	<div id="call-page" class="page">
+		<video id="yours" autoplay></video>
+		<video id="theirs" autoplay></video>
+		<input type="text" id="theirusername">
+		<button id="call">call</button>
+		<button id="hang-up">hang up</button>
+	</div>
+	<script src="jquery.min.js"></script>
+	<script src="client.js"></script>
+</body>
+</html>
